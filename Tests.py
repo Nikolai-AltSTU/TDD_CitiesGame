@@ -1,6 +1,7 @@
 import unittest
 from CityGame import CityGameClass
 
+
 class TestCityGame(unittest.TestCase):
 
     def test_createCityGame(self):
@@ -27,6 +28,16 @@ class TestCityGame(unittest.TestCase):
         cityGame.addCity("Новосибирск")
         self.assertTrue(cityGame.checkRepetition("Барнаул"))
         cityGame.addCity("Барнаул")
+
+    def test_sequential(self):
+        cityGame = CityGameClass()
+        self.assertFalse(cityGame.checkLinear("Барнаул"))
+        cityGame.addCity("Барнаул")
+        self.assertFalse(cityGame.checkLinear("Новосибирск"))
+        cityGame.addCity("Новосибирск")
+        self.assertTrue(cityGame.checkLinear("Красноярск"))
+        cityGame.addCity("Красноярск")
+        self.assertTrue(cityGame.checkLinear("Красноярск"))
 
 
 if __name__ == '__main__':

@@ -22,7 +22,10 @@ class CityGameClass:
         self.used_cities.append(cityName.lower())
 
     def checkLinear(self, cityName):
-        return self.used_cities[-1][-1] == cityName[0]
+        if len(self.used_cities) == 0:
+            return True
+        return self.used_cities[-1][-1] == cityName.lower()[0]
+
 
 
 
