@@ -28,6 +28,14 @@ class TestCityGame(unittest.TestCase):
         self.assertTrue(cityGame.checkRepetition("Барнаул"))
         cityGame.addCity("Барнаул")
 
+    def test_sequential(self):
+        cityGame = CityGameClass()
+        cityGame.addCity("Барнаул")
+        self.assertFalse(cityGame.checkLinear("Новосибирск"))
+        cityGame.addCity("Новосибирск")
+        self.assertTrue(cityGame.checkLinear("Красноярск"))
+        cityGame.addCity("Красноярск")
+        self.assertTrue(cityGame.checkLinear("Красноярск"))
 
 if __name__ == '__main__':
     unittest.main()
