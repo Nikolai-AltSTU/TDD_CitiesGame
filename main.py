@@ -1,7 +1,4 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from CityGame import CityGameClass
 
 
 def print_hi(name):
@@ -14,16 +11,3 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
-
-
-"""
-text1 = open("cities.txt")
-        cities = []
-        for i in text1:
-            cities.append(i)
-
-        for i in range(len(cities)):
-            if cities[i][-1] == "\n":
-                cities[i] = cities[i][:-1]
-"""
