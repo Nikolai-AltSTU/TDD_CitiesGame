@@ -25,11 +25,3 @@ class CityGameClass:
         if len(self.used_cities) == 0:
             return True
         return self.used_cities[-1][-1] == cityName.lower()[0]
-
-
-
-
-
-
-
-
