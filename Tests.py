@@ -19,6 +19,9 @@ class TestCityGame(unittest.TestCase):
         self.assertTrue(CityGameClass().checkIsCity("Новосибирск"))
         self.assertFalse(CityGameClass().checkIsCity("Абракадабра"))
         self.assertFalse(CityGameClass().checkIsCity(""))
+        self.assertTrue(CityGameClass().checkIsCity("белокуриха"))
+        self.assertTrue(CityGameClass().checkIsCity("красноЯрск"))
+
 
 if __name__ == '__main__':
     unittest.main()
