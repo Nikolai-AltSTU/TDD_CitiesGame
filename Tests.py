@@ -18,6 +18,11 @@ class TestCityGame(unittest.TestCase):
         self.assertTrue(CityGameClass().checkIsCity("белокуриха"))
         self.assertTrue(CityGameClass().checkIsCity("красноЯрск"))
 
+    def test_emulateGame(self):
+        cityGame = CityGameClass()
+        self.assertFalse(cityGame.checkRepetion("Барнаул"))
+        self.assertFalse(cityGame.checkRepetion("Новосибирск"))
+
 
 if __name__ == '__main__':
     unittest.main()

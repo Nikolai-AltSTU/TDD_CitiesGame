@@ -14,6 +14,8 @@ class CityGameClass:
     def checkIsCity(self, cityName):
         return cityName.lower() in self.cities
 
+    def checkRepetion(self, cityName):
+        return False;
 
 
 
