@@ -16,10 +16,13 @@ class CityGameClass:
         return cityName.lower() in self.cities
 
     def checkRepetition(self, cityName):
-        is_repetition = cityName.lower() in self.used_cities
-        self.used_cities.append(cityName.lower())
-        return is_repetition
+        return cityName.lower() in self.used_cities
 
+    def addCity(self, cityName):
+        self.used_cities.append(cityName.lower())
+
+    def checkLinear(self, cityName):
+        return self.used_cities[-1][-1] == cityName[0]
 
 
 
