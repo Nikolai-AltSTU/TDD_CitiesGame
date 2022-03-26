@@ -10,10 +10,6 @@ class TestCityGame(unittest.TestCase):
         cityGame = CityGameClass()
         self.assertIsNot(len(cityGame.cities), 0, "Пустой список городов")
 
-    def test_loadCities(self):
-        cityGame = CityGameClass()
-        self.assertTrue("Барнаул" in cityGame.cities, "Нет столицы мира в списке городов")
-
     def test_checkIsCity(self):
         self.assertTrue(CityGameClass().checkIsCity("Барнаул"))
         self.assertTrue(CityGameClass().checkIsCity("Новосибирск"))

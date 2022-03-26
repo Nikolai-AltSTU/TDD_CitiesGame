@@ -7,12 +7,12 @@ class CityGameClass:
         self.cities = []
         for i in citiesFile:
             if i[-1] == "\n":
-                self.cities.append(i[:-1])
+                self.cities.append(i[:-1].lower())
             else:
-                self.cities.append(i)
+                self.cities.append(i.lower())
 
     def checkIsCity(self, cityName):
-        return cityName in self.cities
+        return cityName.lower() in self.cities
 
 
 
