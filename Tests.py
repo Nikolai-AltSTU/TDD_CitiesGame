@@ -11,17 +11,19 @@ class TestCityGame(unittest.TestCase):
         self.assertIsNot(len(cityGame.cities), 0, "Пустой список городов")
 
     def test_checkIsCity(self):
-        self.assertTrue(CityGameClass().checkIsCity("Барнаул"))
-        self.assertTrue(CityGameClass().checkIsCity("Новосибирск"))
-        self.assertFalse(CityGameClass().checkIsCity("Абракадабра"))
-        self.assertFalse(CityGameClass().checkIsCity(""))
-        self.assertTrue(CityGameClass().checkIsCity("белокуриха"))
-        self.assertTrue(CityGameClass().checkIsCity("красноЯрск"))
+        cityGame = CityGameClass()
+        self.assertTrue(cityGame.checkIsCity("Барнаул"))
+        self.assertTrue(cityGame.checkIsCity("Новосибирск"))
+        self.assertFalse(cityGame.checkIsCity("Абракадабра"))
+        self.assertFalse(cityGame.checkIsCity(""))
+        self.assertTrue(cityGame.checkIsCity("белокуриха"))
+        self.assertTrue(cityGame.checkIsCity("красноЯрск"))
 
     def test_emulateGame(self):
         cityGame = CityGameClass()
-        self.assertFalse(cityGame.checkRepetion("Барнаул"))
-        self.assertFalse(cityGame.checkRepetion("Новосибирск"))
+        self.assertFalse(cityGame.checkRepetition("Барнаул"))
+        self.assertFalse(cityGame.checkRepetition("Новосибирск"))
+        self.assertTrue(cityGame.checkRepetition("Барнаул"))
 
 
 if __name__ == '__main__':

@@ -1,6 +1,7 @@
 
 class CityGameClass:
     cities = []
+    used_cities = []
 
     def __init__(self):
         citiesFile = open("cities.txt", encoding='utf-8')
@@ -14,8 +15,10 @@ class CityGameClass:
     def checkIsCity(self, cityName):
         return cityName.lower() in self.cities
 
-    def checkRepetion(self, cityName):
-        return False;
+    def checkRepetition(self, cityName):
+        is_repetition = cityName.lower() in self.used_cities
+        self.used_cities.append(cityName.lower())
+        return is_repetition
 
 
 
